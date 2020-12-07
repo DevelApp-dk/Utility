@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>DevelApp.Utility</AssemblyName>
+    <RootNamespace>DevelApp.Utility</RootNamespace>
+    <Authors>Lars Shakya Buch-Jepsen</Authors>
+    <Company>DevelApp Denmark (CVR 33211740)</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/DevelApp-dk/Utility</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Copyright>Copyright © DevelApp 2020</Copyright>
+    <Description>Contains several Utlity classes used in several projects</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
