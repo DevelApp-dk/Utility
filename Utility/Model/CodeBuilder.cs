@@ -34,6 +34,18 @@ namespace DevelApp.Utility.Model
         }
 
         /// <summary>
+        /// Appends an empty line
+        /// </summary>
+        public CodeBuilder EmptyLine
+        {
+            get
+            {
+                _stringBuilder.AppendLine();
+                return this;
+            }
+        }
+
+        /// <summary>
         /// Called in the end of the code build to translate builder code into string
         /// </summary>
         /// <returns></returns>
@@ -54,17 +66,25 @@ namespace DevelApp.Utility.Model
         /// <summary>
         /// Increase indent for the code
         /// </summary>
-        public void IndentIncrease()
+        public CodeBuilder IndentIncrease
         {
-            _indent += 1;
+            get
+            {
+                _indent += 1;
+                return this;
+            }
         }
 
         /// <summary>
         /// Decrease indent for the code
         /// </summary>
-        public void IndentDecrease()
+        public CodeBuilder IndentDecrease
         {
-            _indent -= 1;
+            get
+            {
+                _indent -= 1;
+                return this;
+            }
         }
     }
 }
