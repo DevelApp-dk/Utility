@@ -1,4 +1,5 @@
 ﻿using DevelApp.Utility.Exceptions;
+using System;
 using System.Text;
 
 namespace DevelApp.Utility.Model
@@ -9,10 +10,12 @@ namespace DevelApp.Utility.Model
     public sealed class CodeBuilder
     {
         private StringBuilder _stringBuilder;
+        private int _indentSpacesPerIndent;
 
         public CodeBuilder(int indentSpacesPerIndent = 4)
         {
             _stringBuilder = new StringBuilder();
+            _indentSpacesPerIndent = indentSpacesPerIndent;
         }
 
         /// <summary>
@@ -22,6 +25,10 @@ namespace DevelApp.Utility.Model
         /// <returns></returns>
         public CodeBuilder L(string line)
         {
+            if(_indent > 0)
+            {
+                _stringBuilder.Append(new string(' ', _indent * _indentSpacesPerIndent));
+            }
             _stringBuilder.AppendLine(line);
             return this;
         }
@@ -47,7 +54,7 @@ namespace DevelApp.Utility.Model
         /// <summary>
         /// Increase indent for the code
         /// </summary>
-        internal void IndentIncrease()
+        public void IndentIncrease()
         {
             _indent += 1;
         }
@@ -55,7 +62,7 @@ namespace DevelApp.Utility.Model
         /// <summary>
         /// Decrease indent for the code
         /// </summary>
-        internal void IndentDecrease()
+        public void IndentDecrease()
         {
             _indent -= 1;
         }
