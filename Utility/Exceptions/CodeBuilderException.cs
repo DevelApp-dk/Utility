@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace DevelApp.Utility.Exceptions
 {
     [Serializable]
-    internal class CodeBuilderException : Exception
+    public class CodeBuilderException : Exception
     {
         public CodeBuilderException()
         {

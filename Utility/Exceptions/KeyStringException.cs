@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace DevelApp.Utility.Exceptions
 {
     [Serializable]
-    internal class KeyStringException : Exception
+    public class KeyStringException : Exception
     {
         public KeyStringException()
         {
