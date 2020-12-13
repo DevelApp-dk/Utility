@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using System.IO;
 
 namespace Utility.UnitTests
 {
@@ -15,7 +16,13 @@ namespace Utility.UnitTests
         {
             //Works only on windows as Environment.NewLine is \
             NamespaceString namespaceString = new NamespaceString("Funny.Onion");
-            namespaceString.ToFilePath.ShouldBe($"Funny\\Onion");
+            string[] stringParts = namespaceString.ToFilePath.Split(Path.DirectorySeparatorChar);
+            stringParts.Length.ShouldBe(2);
+            if (stringParts.Length == 2)
+            {
+                stringParts[0].ShouldBe("Funny");
+                stringParts[1].ShouldBe("Onion");
+            }
         }
 
         [Fact]
