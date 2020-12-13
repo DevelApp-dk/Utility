@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace DevelApp.Utility.Exceptions
 {
     [Serializable]
-    internal class SemanticVersionStringException : Exception
+    public class SemanticVersionStringException : Exception
     {
         public SemanticVersionStringException()
         {

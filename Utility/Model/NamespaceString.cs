@@ -79,7 +79,7 @@ namespace DevelApp.Utility.Model
                 string filePath = string.Empty;
                 for (int counter = 0; counter <= filePathParts.Length - 1; counter += 1)
                 {
-                    filePath = Path.Combine(filePath, filePathParts[0]);
+                    filePath = Path.Combine(filePath, filePathParts[counter]);
                 }
                 return filePath;
             }

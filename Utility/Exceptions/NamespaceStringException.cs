@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace DevelApp.Utility.Exceptions
 {
     [Serializable]
-    internal class NamespaceStringException : Exception
+    public class NamespaceStringException : Exception
     {
         public NamespaceStringException()
         {

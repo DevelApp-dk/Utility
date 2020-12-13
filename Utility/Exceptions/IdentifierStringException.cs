@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace DevelApp.Utility.Exceptions
 {
     [Serializable]
-    internal class IdentifierStringException : Exception
+    public class IdentifierStringException : Exception
     {
         public IdentifierStringException()
         {

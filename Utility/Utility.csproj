@@ -11,7 +11,7 @@
     <RepositoryType>Git</RepositoryType>
     <Copyright>Copyright © DevelApp 2020</Copyright>
     <Description>Contains several Utlity classes used in several projects</Description>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
   </PropertyGroup>
 
   <ItemGroup>
