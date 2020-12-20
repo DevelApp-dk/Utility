@@ -57,6 +57,11 @@ namespace DevelApp.Utility.Model
             return _innerString.Equals(other.ToString());
         }
 
+        public bool Equals(string other)
+        {
+            return _innerString.Equals(other);
+        }
+
         public override string ToString()
         {
             return _innerString;
