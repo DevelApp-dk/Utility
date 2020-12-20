@@ -57,6 +57,11 @@ namespace DevelApp.Utility.Model
             return _innerKeyString.Equals(other.ToString());
         }
 
+        public bool Equals(string other)
+        {
+            return _innerKeyString.Equals(other);
+        }
+
         public override string ToString()
         {
             return _innerKeyString;
