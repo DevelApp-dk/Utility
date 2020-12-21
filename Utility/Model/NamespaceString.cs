@@ -1,5 +1,6 @@
 ﻿using DevelApp.Utility.Exceptions;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -70,6 +71,11 @@ namespace DevelApp.Utility.Model
         public override string ToString()
         {
             return _innerString;
+        }
+
+        public override int GetHashCode()
+        {
+            return 174925959 + EqualityComparer<string>.Default.GetHashCode(_innerString);
         }
 
         /// <summary>

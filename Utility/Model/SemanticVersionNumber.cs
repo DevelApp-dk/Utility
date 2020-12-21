@@ -72,6 +72,15 @@ namespace DevelApp.Utility.Model
             return 0;
         }
 
+        public override int GetHashCode()
+        {
+            int hashCode = -639545495;
+            hashCode = hashCode * -1521134295 + Major.GetHashCode();
+            hashCode = hashCode * -1521134295 + Minor.GetHashCode();
+            hashCode = hashCode * -1521134295 + Patch.GetHashCode();
+            return hashCode;
+        }
+
         #region Implicit operators
 
         public static implicit operator SemanticVersionNumber(string rhs)

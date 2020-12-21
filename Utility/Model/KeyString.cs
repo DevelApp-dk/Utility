@@ -1,5 +1,6 @@
 ﻿using DevelApp.Utility.Exceptions;
 using System;
+using System.Collections.Generic;
 
 namespace DevelApp.Utility.Model
 {
@@ -65,6 +66,11 @@ namespace DevelApp.Utility.Model
         public override string ToString()
         {
             return _innerKeyString;
+        }
+
+        public override int GetHashCode()
+        {
+            return -2062801960 + EqualityComparer<string>.Default.GetHashCode(_innerKeyString);
         }
 
         #region Implicit operators
